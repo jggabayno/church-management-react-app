@@ -1,0 +1,94 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+header {
+    background: $light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 4rem;
+    box-shadow: 0 2px 8px $headershadow;
+
+    a {
+        color: $dark;
+
+        &:hover {
+            color: $dark;
+            opacity: .8;
+        } 
+
+        &.active {
+            // font-weight: 600;
+            opacity: .8;
+            &.cart-wa {
+                // font-weight: 600;
+                opacity: .8;
+            }
+
+            &.cart-woa {
+                font-weight: inherit;
+            }
+        }
+    }
+
+    
+    .logo {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.6rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+        }
+
+        svg {
+            font-size: 1.2rem;
+            color: $dark;
+        }
+
+        .suxl {
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+            gap: 1rem;
+            font-weight: 600;
+        }
+
+        .cart-badge {
+            .ant-badge-count {
+                right: -.4rem;
+                font-size: .7rem;
+            }
+
+            svg {
+                font-size: 1.4rem;
+                color: #4e4e4e;
+            }
+        }
+    }
+
+    
+
+    .user-x-downicon {
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+        margin-left: 2rem;
+        cursor: pointer;
+        font-weight: 600;
+        svg {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            color: $dark;
+            opacity: .8;
+        } 
+    }
+}

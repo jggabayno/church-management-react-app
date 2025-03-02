@@ -1,0 +1,233 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.weddings {
+  display: grid;
+  grid-template-columns: 30% 1fr min-content min-content;
+  grid-template-areas:
+    'title title . export'
+    'search .  . add-user'
+    'wedding-table wedding-table wedding-table wedding-table';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+
+  .btn-export-light {
+    grid-area: export;
+    justify-self: flex-end;
+  }
+
+  .btn-add-user {
+    grid-area: add-user;
+  }
+
+  .search {
+    grid-area: search !important;
+  }
+
+  .wedding-table {
+    grid-area: wedding-table;
+  }
+
+  .users-table {
+    // grid-area: table;
+
+    .ant-image {
+      width: 4rem;
+
+      img {
+        width: 100%;
+        object-fit: scale-down;
+      }
+    }
+
+    .ant-space-item {
+      color: #1890ff;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+
+    .ant-descriptions {
+      .ant-descriptions-item-label {
+        width: 12rem;
+        color: #a5a5a5;
+      }
+
+      .desc-label-photo span {
+        display: flex;
+        align-items: center;
+      }
+
+    }
+  }
+
+  .couple-description-column {
+    max-width: 12rem;
+
+    .ant-descriptions-item-label {
+      width: 4rem;
+    }
+  }
+
+  .groom-bride-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'groom-detail bride-detail'
+      'wedding-detail wedding-detail';
+    gap: 2rem;
+  }
+
+  .wedding-groom-detail {
+    grid-area: groom-detail;
+  }
+
+  .wedding-bride-detail {
+    grid-area: bride-detail;
+  }
+
+  .wedding-detail {
+    grid-area: wedding-detail;
+  }
+
+  .wedding-actions {
+    >div {
+      cursor: pointer;
+      color: $primary;
+    }
+  }
+
+}
+
+
+
+.btn-print-container {
+  width: 100%;
+  text-align: right;
+  padding: 1rem 0;
+
+  .btn-print {}
+}
+
+.wedding-certification {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid $primary;
+  }
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 1.5%;
+    top: 2.5%;
+    width: 97%;
+    height: 95%;
+    border: 2px solid $primary;
+  }
+
+  padding: 2rem;
+
+  .certification-highlight {
+    text-align: center;
+    padding-top: 5rem;
+
+    h1 {
+      color: $primary;
+      font-weight: bold;
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .certification-couple-name {
+      color: $primary;
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin: 0 .7rem;
+    }
+
+    .certification-date-married {
+      color: $primary;
+      font-weight: bold;
+    }
+  }
+
+  .certification-name-with-signature {
+    padding: 7rem 5rem 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+
+    >div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+
+      .sns-name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .certification-pastor-with-signature {
+    padding: 10rem 1rem 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    font-size: 1rem;
+
+    >span:first-child {
+      font-weight: 500;
+    }
+
+    >span:last-child {
+      color: $primary;
+    }
+
+  }
+
+}
+
+.service-steps {
+  grid-column: 1/3;
+  padding: 1rem 4.5rem 4rem 4.5rem !important;
+
+}
+
+.requirements {
+  grid-column: 1/3;
+
+  h3 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../assets/styles/abstracts/variables';
+
+.login {
+    display: grid;
+    grid-template-columns: 1fr 22% 1fr;
+    grid-template-areas: '. form .';
+
+    min-height: 100vh;
+    align-items: center;
+    form {
+        grid-area: form;
+        .login-header {
+            text-align: center;
+
+            .logo {
+                border-radius: 50%;
+                width: 10rem;
+            }
+    
+            .title {
+                margin-top: 2rem;
+                margin-bottom: .7rem;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+    
+            .sub-title {
+                font-size: 1.1rem;
+                color: $dark;
+            }
+        }
+
+
+
+    }
+}

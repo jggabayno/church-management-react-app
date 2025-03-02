@@ -1,0 +1,78 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.event-calendar {
+
+  .calendar {
+    .ant-picker-body {
+      z-index: 1;
+
+    }
+  }
+
+  .events {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: .8rem;
+    font-weight: bold;
+
+  }
+
+  .notes-month {
+    font-size: .9rem;
+    text-align: center;
+
+  }
+
+  .baptism-theme {
+    padding: .4rem;
+    border-radius: .4rem;
+    margin-bottom: .4rem;
+    background: #EBEBC5;
+    color: $dark;
+  }
+
+  .wedding-theme {
+    padding: .4rem;
+    border-radius: .4rem;
+    margin-bottom: .4rem;
+    background: #C2ABB5;
+    color: $light;
+  }
+
+  .activity-theme {
+    padding: .4rem;
+    border-radius: .4rem;
+    margin-bottom: .4rem;
+    background: #56da58;
+    color: $light;
+  }
+
+  .date-subtitle {
+    font-size: .7rem;
+    font-weight: normal;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// display: grid;
+// grid-template-columns: 30% 1fr min-content min-content;
+// grid-template-areas: 'title title . export' 'search .  . add-brand' 'table table table table';
+// grid-template-rows: min-content min-content min-content;
+// gap: 2rem;
+
+// .title {
+//   grid-area: title;
+// }

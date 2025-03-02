@@ -1,0 +1,35 @@
+@import '../../assets/styles/abstracts/variables';
+
+.act-of-givings {
+  display: grid;
+  grid-template-columns: 30% 1fr min-content min-content;
+  grid-template-areas: 'title title . export' 'search .  . .' 'aog-tabs aog-tabs aog-tabs aog-tabs';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+    
+  .btn-export-light {
+  grid-area: export;
+  justify-self: flex-end;
+  }
+ 
+  .search {
+    grid-area: search !important;
+  }
+
+  .aog-tabs {
+  grid-area: aog-tabs;
+
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  }
+
+}

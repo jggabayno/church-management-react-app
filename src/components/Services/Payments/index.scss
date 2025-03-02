@@ -1,0 +1,53 @@
+@import '../../../assets/styles/abstracts/variables';
+
+.payments {
+  display: grid;
+  grid-template-columns: 30% 1fr min-content min-content;
+  grid-template-areas: 'title title . export' 'search .  . .' 'payments-table payments-table payments-table payments-table';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+
+  .search {
+    grid-area: search;
+  }
+
+  .btn-export-light {
+    grid-area: export;
+    justify-self: flex-end;
+  }
+
+  .payments-table {
+    grid-area: payments-table;
+  }
+
+  .payments-table {
+    .ant-image {
+      width: 4rem;
+
+      img {
+        width: 100%;
+        object-fit: scale-down;
+      }
+    }
+
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  }
+
+  .total {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+}
+
+ 

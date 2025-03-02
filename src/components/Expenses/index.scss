@@ -1,0 +1,39 @@
+@import '../../assets/styles/abstracts/variables';
+
+.expenses {
+  display: grid;
+  grid-template-columns: 30% 1fr min-content min-content;
+  grid-template-areas: 'title title . export' 'search .  .  btn-add' 'expense-table expense-table expense-table expense-table';
+  grid-template-rows: min-content min-content min-content;
+  gap: 2rem;
+
+  .title {
+    grid-area: title;
+  }
+    
+  .btn-export-light {
+  grid-area: export;
+  justify-self: flex-end;
+  }
+ 
+  .search {
+    grid-area: search !important;
+  }
+
+  .btn-add {
+    grid-area: btn-add;
+  }
+
+  .expense-table {
+  grid-area: expense-table;
+
+  .ant-space-item {
+    color: #1890ff;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  }
+
+}

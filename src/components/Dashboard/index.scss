@@ -1,0 +1,135 @@
+@import '../../assets/styles/abstracts/variables';
+
+.dashboard {
+
+    display: grid;
+    // grid-template-columns: max-content 1fr auto 10%;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content 31rem;
+
+    grid-template-areas:
+        'title title . export'
+        'display-date .  range-date range-date'
+        'total total total total'
+        'member-positions member-positions age age';
+    gap: 2rem;
+
+    .title {
+        grid-area: title;
+        font-weight: bold;
+    }
+
+    .btn-export {
+        grid-area: export;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+        }
+    }
+
+    .display-date {
+        grid-area: display-date;
+        align-self: flex-end;
+    }
+
+    .range-date {
+        grid-area: range-date;
+        justify-self: flex-end;
+    }
+
+    .total {
+        grid-area: total;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+        grid-template-rows: 8rem;
+        gap: 2rem;
+
+        position: relative;
+        justify-content: center;
+
+        .total-item {
+            border-radius: .4rem;
+            background-color: #fff;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 10px #61616126;
+
+            h3 {
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+
+            span {
+                font-size: 1rem;
+                font-weight: 500;
+                color: #a5a5a5;
+            }
+        }
+    }
+
+    .member-positions {
+        grid-area: member-positions;
+        box-shadow: 2px 2px 10px #61616126;
+        padding: 1.6rem 1.4rem;
+        border-radius: .4rem;
+
+        h4 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    .age {
+        grid-area: age;
+        position: relative;
+        box-shadow: 2px 2px 10px #61616126;
+        padding: 1.6rem 1.4rem;
+        border-radius: .4rem;
+
+        h4 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .recharts-text {
+            font-weight: 600;
+            font-size: .9rem;
+            fill: $dark;
+        }
+
+        .recharts-surface {
+            height: 90%;
+        }
+
+        .recharts-legend-wrapper {
+
+            padding: 1rem;
+
+            ul {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                li {
+                    padding: .2rem 0;
+                }
+
+                .recharts-legend-item-text {
+                    color: $dark  !important;
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+
+    }
+
+
+}
